@@ -65,7 +65,7 @@ see, running in stingy mode is exactly the same as core (because
 that's all it is.
 
 If you want to stay dynamic all the way, you can
-pass over 1500 non-active debug statements and add only 1ms of latency.
+pass over 1500 non-active debug statements and stilladd only 1ms of latency.
 
 ```
 [Baseline] Running an empty function x 96,610,538 ops/sec ±0.97% (94 runs sampled)
@@ -76,6 +76,9 @@ pass over 1500 non-active debug statements and add only 1ms of latency.
 [Debug mode] Dynamic debuglog x 160,839 ops/sec ±1.33% (91 runs sampled)
 [Debug mode] Node core debuglog x 165,748 ops/sec ±1.28% (92 runs sampled)
 ```
+
+### Test
+`npm test` to see it in action.
 
 ### License
 MIT

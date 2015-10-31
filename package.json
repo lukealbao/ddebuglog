@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"No tests at the moment. See npm run benchmark and read the (short!) source.\" && exit 1",
+      "test": "node test/example.js",
     "benchmark": "NODE_ENV=benchmarking NODE_DEBUG=catchme node test/benchmark.js 2> /dev/null"
   },
   "repository": {

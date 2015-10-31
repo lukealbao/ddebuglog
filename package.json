@@ -1,0 +1,39 @@
+{
+  "name": "ddebuglog",
+  "version": "0.1.0",
+  "description": "Dynamic Debuglog",
+  "main": "dynamic-debuglog.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"No tests at the moment. See npm run benchmark and read the (short!) source.\" && exit 1",
+    "benchmark": "NODE_ENV=benchmarking NODE_DEBUG=catchme node test/benchmark.js 2> /dev/null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukealbao/ddebuglog.git"
+  },
+  "keywords": [
+    "debug",
+    "log",
+    "debuglog",
+    "util",
+    "utilities",
+    "tracing",
+    "dynamic",
+    "programmatic debugging"
+  ],
+  "author": {
+    "name": "Luke Albao",
+    "email": "lukealbao+ddebuglog@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukealbao/ddebuglog/issues"
+  },
+  "homepage": "https://github.com/lukealbao/ddebuglog#readme",
+  "devDependencies": {
+    "benchmark": "^1.0.0"
+  }
+}

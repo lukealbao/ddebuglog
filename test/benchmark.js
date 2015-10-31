@@ -1,9 +1,20 @@
 // NODE_ENV = 'benchmarking'
 // NODE_DEBUG = 'catchme'
+var Benchmark;
+// Since we are redirecting stderr, let's do this:
+try {
+  Benchmark= require('benchmark');
+} catch (e) { 
+  if (e.code === 'MODULE_NOT_FOUND') {
+    console.log('You must install benchmark.js!');
+    console.log('Run npm install without the --production flag.');
+    process.exit(0);
+  }
+}
 
 function emptyFn () {}
 
-var ddbuglog = require(__dirname + '/debug');
+var ddbuglog = require(__dirname + '/../dynamic-debuglog');
 var dynDebugDebugMode = ddbuglog('catchme');
 var dynDebugNoMatchMode = ddbuglog('nomatch');
 var dynDebugNoMatchStaticMode = ddbuglog('nomatch', {useStatic: 'benchmarking'});
@@ -12,7 +23,6 @@ var coredebuglog = require('util').debuglog;
 var staticDebugDebugMode = coredebuglog('catchme');
 var staticDebugNoMatchMode = coredebuglog('nomatch');
 
-var Benchmark = require('benchmark');
 var suite = new Benchmark.Suite();
 
 suite

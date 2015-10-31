@@ -1,13 +1,13 @@
 {
   "name": "ddebuglog",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Dynamic Debuglog",
   "main": "dynamic-debuglog.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-      "test": "node test/example.js",
+    "test": "node test/example.js",
     "benchmark": "NODE_ENV=benchmarking NODE_DEBUG=catchme node test/benchmark.js 2> /dev/null"
   },
   "repository": {

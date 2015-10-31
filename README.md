@@ -68,13 +68,13 @@ If you want to stay dynamic all the way, you can
 pass over 1500 non-active debug statements and add only 1ms of latency.
 
 ```
-[Empty function] x 94,305,879 ops/sec ±0.92% (89 runs sampled)
-[Non-debug mode] Dynamic debuglog x 1,489,288 ops/sec ±1.03% (92 runs sampled)
-[Non-debug mode] Node core debuglog x 98,147,640 ops/sec ±0.60% (92 runs sampled)
-[Non-debug mode] Dynamic debuglog in active stingy mode x 96,861,210 ops/sec ±1.08% (91 runs sampled)
+[Baseline] Running an empty function x 96,610,538 ops/sec ±0.97% (94 runs sampled)
+[Non-debug mode] Dynamic debuglog x 1,499,211 ops/sec ±0.99% (93 runs sampled)
+[Non-debug mode] Node core debuglog x 97,839,585 ops/sec ±0.76% (94 runs sampled)
+[Non-debug mode] Dynamic debuglog with active useStatic x 96,241,918 ops/sec ±1.91% (92 runs sampled)
 
-[Debug mode] Dynamic debuglog x 159,304 ops/sec ±1.29% (88 runs sampled)
-[Debug mode] Node core debuglog x 163,106 ops/sec ±1.18% (91 runs sampled)
+[Debug mode] Dynamic debuglog x 160,839 ops/sec ±1.33% (91 runs sampled)
+[Debug mode] Node core debuglog x 165,748 ops/sec ±1.28% (92 runs sampled)
 ```
 
 ### License

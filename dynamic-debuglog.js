@@ -16,7 +16,7 @@ function createDebugLog (name, opts) {
 
   var reportName = name.toUpperCase().split(/\W+/).join('');
   var prefixes = reportName + ' ' + process.pid + ':';
-  var nameRegex = new RegExp(reportName , 'i');
+  var nameRegex = new RegExp('\\b' + reportName + '\\b' , 'i');
 
   function ddebuglog () {
     if (nameRegex.test(process.env.NODE_DEBUG)) {

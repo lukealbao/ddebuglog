@@ -1,6 +1,6 @@
 {
   "name": "ddebuglog",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Dynamic Debuglog",
   "main": "dynamic-debuglog.js",
   "directories": {

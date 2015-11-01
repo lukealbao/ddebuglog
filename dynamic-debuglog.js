@@ -1,5 +1,6 @@
+'use strict';
+
 var util = require('util');
-var sprintf = util.format;
 var staticDebugLog = util.debuglog;
 
 var debugs = {};
@@ -14,9 +15,8 @@ function createDebugLog (name, opts) {
     }
   }
 
-  var reportName = name.toUpperCase().split(/\W+/).join('');
-  var prefixes = reportName + ' ' + process.pid + ':';
-  var nameRegex = new RegExp('\\b' + reportName + '\\b' , 'i');
+  var prefixes = name.toUpperCase() + ' ' + process.pid + ':';
+  var nameRegex = new RegExp('\\b' + name + '\\b' , 'i');
 
   function ddebuglog () {
     if (nameRegex.test(process.env.NODE_DEBUG)) {
